@@ -1,0 +1,101 @@
+/* Styles4.css */
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    width: 100%;
+    padding: 25px 55px;
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+  }
+  
+  .search-form {
+    margin-left: auto;
+  }
+  
+  .search-bar {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .navbar-options {
+    display: flex;
+  }
+  
+  .navbar-options a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  
+  .profile-logo {
+    background-color: #555;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  /* Main content styles */
+  .questions {
+    display: flex;
+  }
+  
+  .question-card {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+  
+  .question-card h2 {
+    margin-bottom: 10px;
+  }
+  
+  .question-card ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .question-card ul li {
+    margin-bottom: 5px;
+  }
+  
+  .question-card ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  /* Question form styles */
+  .question-form {
+    flex: 1;
+  }
+  
+  .question-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .question-form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .question-form input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  

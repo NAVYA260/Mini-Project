@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: rgb(45, 136, 164);
+    color: #fff;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 24px;
+}
+
+.search-bar {
+    width: 300px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+.profile-logo {
+    background-color: #444;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.topic-heading {
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.answer-box {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.answer {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.like-button,
+.share-button,
+.back-button {
+    border: none;
+    color: #333;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.like-button:hover,
+.share-button:hover,
+.back-button:hover {
+    background-color: #f0f0f0;
+}
+
+.heart-icon {
+    color: #FF0000;
+    transition: color 0.3s ease;
+}
+
+.heart-icon:hover {
+    color: #FF6666;
+}
+
+.navbar-options {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-options a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 80px;
+    font-size: 18px;
+}
