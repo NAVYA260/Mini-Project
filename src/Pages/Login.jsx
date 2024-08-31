@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import '../Styles/Styles3.css'
 
 const Login = () => {
   return (
@@ -6,10 +7,10 @@ const Login = () => {
       <form>
         <h1>Login</h1>
         <div>
-          <input type="text" id="username" name="username" placeholder="Username" />
+          <input type="text" id="username" name="username" placeholder="Username" required/>
         </div>
         <div>
-          <input type="password" id="password" name="password" placeholder="Password" />
+          <input type="password" id="password" name="password" placeholder="Password" required/>
         </div>
         <div className="create-account">
           <a href='Subjects' className="btn-continue">Login</a>

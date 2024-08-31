@@ -7,20 +7,33 @@ body {
     font-family: Arial, sans-serif;
     background-color: rgb(216, 206, 206);
 }
+
 form {
     width: 300px;
     text-align: center;
 }
+
 input[type="text"],
 input[type="password"],
 input[type="email"] {
-    padding-left: 40px;
+    padding: 0 10px; 
     width: 100%;
     margin-bottom: 10px;
     height: 40px;
     border-radius: 5px;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    text-align: left; 
+}
+input[type="email"] {
+    padding: 0 50px; 
+    width: 100%;
+    margin-bottom: 10px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: center; 
 }
 
 button[type="submit"] {
@@ -51,6 +64,7 @@ button[type="submit"] {
 .create-account button:hover {
     background-color: #b3d7ff;
 }
+
 .btn-continue {
     background-color: rgb(45, 136, 164);
     color: #fff;

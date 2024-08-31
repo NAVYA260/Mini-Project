@@ -21,16 +21,16 @@ const DBMSSolutionHub = () => {
     return (
         <div>
             <div className="navbar">
-                <div className="navbar-brand">Solution Hub</div>
-                <form className="search-form">
-                    <input type="text" className="search-bar" placeholder="Search..." />
-                </form>
-                <div className="navbar-options">
-                    <a href="Login">Home</a>
-                    <a href="Subjects">Subjects</a>
-                </div>
-                <div className="profile-logo">Profile</div>
-            </div>
+        <div className="navbar-brand">Solution Hub</div>
+        <form className="search-form">
+          <input type="text" className="search-bar" placeholder="Search..." />
+        </form>
+        <div className="navbar-options">
+          <a href="/Subjects">Subjects</a>
+          <a href="/Profile">Profile</a>
+          <a href="/Login">Log out</a>
+        </div>
+      </div>
 
             <div className="questions">
                 <div className="question-card">

@@ -1,7 +1,5 @@
 import React from 'react';
-import Styles1 from '../Styles/Styles1.css';
-; 
-
+import '../Styles/Styles1.css';
 function App() {
   return (
     <div className="container">

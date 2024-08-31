@@ -1,72 +1,64 @@
-import React, { useState } from 'react';
-import '../Styles/Styles8.css'
+import React from 'react';
+import '../Styles/Styles6.css'
 
-const GreedyAlgorithm = () => {
-    const [likes, setLikes] = useState(0);
+const DBMSSolution = () => {
+    const handleLikeClick = (event) => {
+        const likeCount = event.target.querySelector('.like-count');
+        const currentLikes = parseInt(likeCount.textContent);
 
-    const handleLike = () => {
-        setLikes(likes + 1);
+        if (event.target.classList.contains('liked')) {
+            likeCount.textContent = currentLikes - 1;
+            event.target.classList.remove('liked');
+        } else {
+            likeCount.textContent = currentLikes + 1;
+            event.target.classList.add('liked');
+        }
     };
 
     return (
         <div>
             <div className="navbar">
-                <div className="navbar-brand">Solution Hub</div>
-                <a href="index.html" className="back-button">&#8592;</a>
-                <div className="navbar-options">
-                    <a href="Login">Home</a>
-                    <a href="Subjects">Subjects</a>
-                </div>
-                <div className="profile-logo">Profile</div>
-            </div>
-
+        <div className="navbar-brand">Solution Hub</div>
+        <form className="search-form">
+          <input type="text" className="search-bar" placeholder="Search..." />
+        </form>
+        <div className="navbar-options">
+          <a href="/Subjects">Subjects</a>
+          <a href="/Profile">Profile</a>
+          <a href="/Login">Log out</a>
+        </div>
+      </div>
             <div className="topic-heading">Greedy Algorithm</div>
             <div className="answer-box">
                 <div className="answer">
-                    <div className="user-name">Olivia</div><br />
-                    <p>A greedy algorithm is an approach for solving problems by making the locally optimal choice at each stage with the hope of finding a global optimum.</p>
-                    <p>Here's a simple example of a greedy algorithm:</p>
-                    <ol>
-                        <li>Start with an empty set.</li>
-                        <li>At each step, pick the most favorable item and add it to the set.</li>
-                        <li>Continue until no more items can be added without violating constraints.</li>
-                    </ol>
-                    <p>Greedy algorithms are often used in optimization problems, such as finding the shortest path in a graph, scheduling tasks, or minimizing the cost of a solution.</p>
+                    <div className="user-name" style={{ float: 'right' }}>Elizabeth</div><br />
+                    <p>Greedy algorithms typically (but not always) fail to find the globally optimal solution because they usually do not operate exhaustively on all the data.</p> 
+                    <p>They can make commitments to certain choices too early, preventing them from finding the best overall solution later.</p>
+                    <p>For example, all known greedy coloring algorithms for the graph coloring problem and all other NP-complete problems do not consistently find optimum solutions.</p> 
+                    <p>Nevertheless, they are useful because they are quick to think up and often give good approximations to the optimum.</p>
+                    <p>If a greedy algorithm can be proven to yield the global optimum for a given problem class, it typically becomes the method of choice because it is faster than other optimization methods like dynamic programming.</p>
+                    <p> Examples of such greedy algorithms are Kruskal's algorithm and Prim's algorithm for finding minimum spanning trees and the algorithm for finding optimum Huffman trees.</p>
+
                     <div className="card-buttons">
-                        <button className="like-button" onClick={handleLike}>
-                            <span className="heart-icon">&#10084;</span> <span className="like-count">{likes}</span>
-                        </button>
+                        <div className="like-button" onClick={handleLikeClick}>
+                            <span className="heart-icon">&#10084;</span> <span className="like-count">0</span>
+                        </div>
                         <a href="share-page.html" className="share-button">Share</a>
                     </div>
+                    <div className="question-form">
+          <div className="question-card">
+          <h2 className="left-align">Submit a new solution</h2>
+            <form id="questionForm">
+              <input type="text" id="questionTitle" placeholder="Enter your solution" required />
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+        </div>
                 </div>
             </div>
-            <div className="card">
-                <div className="answer">
-                    <div className="user-name">Elizabeth</div><br />
-                    <p>A greedy algorithm is an approach for solving a problem by selecting the best option available at the moment. It doesn't worry whether the current best result will bring the overall optimal result.</p>
-                    <p>The algorithm never reverses the earlier decision even if the choice is wrong. It works in a top-down approach.</p>
-                    <p>This algorithm may not produce the best result for all the problems. It's because it always goes for the local best choice to produce the global best result.</p>
-                    <p>However, we can determine if the algorithm can be used with any problem if the problem has the following properties:</p>
-                    <b>1. Greedy Choice Property</b>
-                    <p>If an optimal solution to the problem can be found by choosing the best choice at each step without reconsidering the previous steps once chosen, the problem can be solved using a greedy approach. This property is called greedy choice property.</p>
-                    <b>2. Optimal Substructure</b>
-                    <p>If the optimal overall solution to the problem corresponds to the optimal solution to its subproblems, then the problem can be solved using a greedy approach. This property is called optimal substructure.</p>
-                    <b>Advantages of Greedy Approach</b>
-                    <ul>
-                        <li>The algorithm is easier to describe.</li>
-                        <li>This algorithm can perform better than other algorithms (but, not in all cases).</li>
-                        <li>A greedy algorithm works by making the locally optimal choice at each stage in the hope of finding a global optimum. It's simple and efficient for many problems, but it may not always produce the best solution.</li>
-                    </ul>
-                </div>
-                <div className="card-buttons">
-                    <button className="like-button" onClick={handleLike}>
-                        <span className="heart-icon">&#10084;</span> <span className="like-count">{likes}</span>
-                    </button>
-                    <a href="share-page.html" className="share-button">Share</a>
-                </div>
-            </div>
+
         </div>
     );
 }
 
-export default GreedyAlgorithm;
+export default DBMSSolution;
